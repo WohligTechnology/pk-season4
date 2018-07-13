@@ -135,8 +135,14 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 // @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../bower_components/bootstrap/scss/bootstrap";
 @import "other/font-fix";
+//font
+@font-face {
+    src: url('../fonts/Anton/Anton-Regular.ttf');
+    font-family: 'Anton-Regular';
+}
+
 body {
-    padding-top: 70px;
+    // padding-top: 70px;
 }
 
 img.loading {
@@ -177,6 +183,15 @@ footer {
     p {
         margin: 0;
     }
+}
+
+//classes for color
+.yellow-color {
+    color: #F2CB07 !important;
+}
+
+.purple-color {
+    color: #071F4E;
 }
 
 //bootstrap forms
@@ -264,4 +279,6 @@ header {
     height: 100%;
 }
 
-.ui-select-bootstrap.open .dropdown-menu { display: block; }
+.ui-select-bootstrap.open .dropdown-menu {
+    display: block;
+}
