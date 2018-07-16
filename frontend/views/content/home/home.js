@@ -1,3 +1,4 @@
+var mySwiper;
 myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
@@ -68,5 +69,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             stateOff: 'glyphicon-off'
         }
     ];
-
+    $timeout(function () {
+        mySwiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+    }, 1000);
 })

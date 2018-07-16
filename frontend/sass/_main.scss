@@ -141,6 +141,11 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     font-family: 'Anton-Regular';
 }
 
+@font-face {
+    src: url('../fonts/D-regular/D-regular.otf');
+    font-family: 'D-Regular';
+}
+
 body {
     // padding-top: 70px;
 }
@@ -191,10 +196,13 @@ footer {
 }
 
 .purple-color {
-    color: #071F4E;
+    color: #071F4E !important;
 }
 
-//bootstrap forms
+//background-color
+.yellow-bg {
+    background-color: #F2CB07 !important;
+} //bootstrap forms
 .input-lg,
 .input-group-lg>.form-control,
 .input-group-lg>.input-group-addon,
