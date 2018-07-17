@@ -6,6 +6,7 @@
     }
     top: 50%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
 }
 
@@ -13,7 +14,7 @@
     bottom: 5%;
     width: 100%;
     li {
-        width: 15.2%;
+        width: 15.1%;
         font-size: 14px;
         height: 20px;
         position: relative;
@@ -60,12 +61,12 @@
     bottom: -26px;
     height: 26px;
     position: absolute;
-    right: -20px;
-    width: 165px;
+    right: -22px;
+    width: 115px;
 }
 
 .common-btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     border: solid rgba(255, 212, 90, 1) 0px;
@@ -80,7 +81,7 @@
 
 .episode-section {
     .imgsize-450 {
-        height: 450px;
+        height: 50vh;
         border: 10px solid white;
     }
 }
@@ -114,7 +115,61 @@
 
 .num-alpha {
     border: 10px solid rgba(255, 212, 90, 1);
+    background: #081f4e;
+    min-height: 210px;
+    &:hover {
+        background: white;
+        .tb-border {
+            display: none;
+            opacity: 0;
+            transition: display 0s, opacity 0.5s linear;
+        }
+        .num-alpha-hover {
+            display: block;
+            opacity: 1;
+        }
+    }
     h2 {
         font-size: 4rem;
+        letter-spacing: 0;
+    }
+}
+
+.num-alpha-hover {
+    display: none;
+    opacity: 0;
+    transition: display 0s, opacity 0.5s linear;
+    p {
+        font-size: 1rem;
+        letter-spacing: 0;
+        font-weight: normal;
+        line-height: 1.5;
+        color: black;
+    }
+}
+
+.tb-border {
+    font-family: 'D-Regular';
+    &:before {
+        content: "";
+        width: 50%;
+        top: 0;
+        left: 25%;
+        content: "";
+        border-top: 1px solid #ffd45a;
+        position: absolute;
+    }
+    &:after {
+        content: "";
+        width: 50%;
+        left: 25%;
+        bottom: 0;
+        content: "";
+        border-bottom: 1px solid #ffd45a;
+        position: absolute;
+    }
+    .num-alpha-desc {
+        letter-spacing: 0.30em;
+        font-size: 1.4375rem;
     }
 }
