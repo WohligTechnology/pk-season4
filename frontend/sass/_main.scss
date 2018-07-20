@@ -263,6 +263,9 @@ footer {
 header {
     transition: all 300ms ease;
 }
+.social-icons{
+    right: 0;
+}
 
 .nav-up {
     transform: translateY(-100%);
@@ -290,3 +293,93 @@ header {
 .ui-select-bootstrap.open .dropdown-menu {
     display: block;
 }
+.header-icons{
+    .display{
+        display: none;
+    }
+}
+
+.font-D-Regular{
+font-family: D-Regular;
+}
+.blue-border{
+    border:solid 10px #071f4e;
+}
+.blue-border-light{
+    border: solid 3px #071f4e;
+}
+.white-border{
+    border:solid 10px white;
+}
+.active{
+    color: yellow;
+}
+
+//digital-inside
+.inside-page{
+    background-image: url("../img/home/home-bg.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    min-height: 94vh;
+    .num-alpha {
+        min-height: 242px;
+        min-width: 242px;
+    }
+    .initial-letter{
+        font-family: 'Anton-Regular';
+        font-size: 100px;
+        color: $yellow;
+        margin-left: auto;
+    }
+    .initial-word{
+        font-family: 'Anton-Regular';
+        font-size: 45px;
+        line-height: 45px;
+        color: #071f4e;
+    }
+    .digital-tabs{
+        overflow-x: auto;
+    }
+    .digital-text{
+        font-size: 36px;
+        line-height: 32px;
+    }
+    .season-common {
+        position: relative;
+        border-top: none!important;
+        border: 5px solid $yellow;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 78%;
+            border-bottom: 5px solid $yellow;
+        }
+    }
+    .season-text {
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        font-family: 'D-Regular';
+        h3 {
+            font-size: 50px;
+            color: #081f4e;
+            letter-spacing: 2px;
+        }
+    }
+    .gallery-images{
+
+    }
+}
+//digital-inside-end
+
+
+// * .div {
+//     width: 200px;
+//     height: 200px;
+//     overflow: auto;
+    
+//   }

@@ -37,8 +37,9 @@
     background-image: url("../img/home/home-bg.png");
     background-attachment: fixed;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
+    margin-top: -6px;
 }
 
 .blue-bg {
@@ -66,7 +67,7 @@
 }
 
 .common-btn {
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     border: solid rgba(255, 212, 90, 1) 0px;
@@ -77,6 +78,11 @@
         border-color: transparent;
         transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s
     }
+}
+
+.about-us{
+    font-size: 15px;
+    line-height: 18px;
 }
 
 .episode-section {
@@ -109,7 +115,7 @@
         background-position: center;
         background-size: cover;
         width: 300px;
-        height: 300px;
+        height: 187px;
       }
       
       // Carousel configuration parameters
@@ -171,6 +177,15 @@
     border: 10px solid rgba(255, 212, 90, 1);
     background: #081f4e;
     min-height: 210px;
+    min-width: 210px;
+    cursor: pointer;
+    .num-alpha-hover {
+        color: black;
+        font-size: 14px;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
+    }
     &:hover {
         background: white;
         .tb-border {
@@ -179,8 +194,8 @@
             transition: display 0s, opacity 0.5s linear;
         }
         .num-alpha-hover {
-            display: block;
             opacity: 1;
+            transition: opacity 1s ease-in-out,
         }
     }
     h2 {
@@ -189,25 +204,55 @@
     }
 }
 
-.num-alpha-hover {
-    display: none;
-    opacity: 0;
-    transition: display 0s, opacity 0.5s linear;
-    p {
-        font-size: 1rem;
+
+.partners-alpha {
+    border: 10px solid rgba(255, 212, 90, 1);
+    background-color: white;
+    color: #081f4e;
+    min-height: 250px;
+    position: relative;
+    .partner-text{
+        font-family: D-Regular;
+        font-size: 30px;
+        letter-spacing: 9px;
+    }
+    .tb-border{
+        &:before{
+            top: 40px;
+        }
+        &:after{
+            bottom: 40px;
+        }
+    }
+    .partners-alpha-hover{
+position: absolute;
+opacity: 0;
+transition: opacity 0.1s ease-in-out;
+    }
+    &:hover {
+        .tb-border {
+            display: none;
+            opacity: 0;
+            transition: display 0s, opacity 0.5s linear;
+        }
+        .partners-alpha-hover {
+            opacity: 1;
+            transition: opacity 1s ease-in-out,
+        }
+    }
+    h2 {
+        font-size: 4rem;
         letter-spacing: 0;
-        font-weight: normal;
-        line-height: 1.5;
-        color: black;
     }
 }
+
 
 .tb-border {
     font-family: 'D-Regular';
     &:before {
         content: "";
         width: 50%;
-        top: 0;
+        top: 15%;
         left: 25%;
         content: "";
         border-top: 1px solid #ffd45a;
@@ -217,7 +262,7 @@
         content: "";
         width: 50%;
         left: 25%;
-        bottom: 0;
+        bottom: 15%;
         content: "";
         border-bottom: 1px solid #ffd45a;
         position: absolute;
@@ -226,4 +271,7 @@
         letter-spacing: 0.30em;
         font-size: 1.4375rem;
     }
+}
+.footer-end{
+    border-bottom: solid 100px #071f4e;
 }

@@ -24,6 +24,21 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
+        .state('digital-course', {
+            url: "/digital-course",
+            templateUrl: tempateURL,
+            controller: 'DigitalCtrl'
+        })
+        .state('contest-hub', {
+            url: "/contest-hub",
+            templateUrl: tempateURL,
+            controller: 'ContestCtrl'
+        })
+        .state('photo-gallery', {
+            url: "/photo-gallery",
+            templateUrl: tempateURL,
+            controller: 'GalleryCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,

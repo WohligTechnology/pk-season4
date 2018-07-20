@@ -4,25 +4,30 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
 
-    var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide:3,
-        slidesPerView: 'auto',
-        autoplay:4000,
-        speed:800,
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows : true,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
+    // mySwiper = new Swiper('.swiper-container', {
+    //     initialSlide: 3,
+    //     speed: 400,
+    //     spaceBetween: 100,
+    //     loop:true,
+    // });
+    $timeout(function () {
+        mySwiper = new Swiper('.swiper-container', {
+            initialSlide: 3,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+              },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+    }, 0);
 
     $scope.suppliers = [{
         name: "Casey Slusse",
@@ -45,10 +50,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         invoice: "#1024590 invoice is Pending",
         img: 'img/mike.png'
     }];
-
-
-
-
 
     $scope.submitForm = function (data) {
         console.log("This is it");
@@ -88,22 +89,4 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             stateOff: 'glyphicon-off'
         }
     ];
-    $timeout(function () {
-        mySwiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-        })
-    }, 1000);
 })
