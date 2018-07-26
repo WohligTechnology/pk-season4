@@ -4,15 +4,12 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
 
-    // mySwiper = new Swiper('.swiper-container', {
-    //     initialSlide: 3,
-    //     speed: 400,
-    //     spaceBetween: 100,
-    //     loop:true,
-    // });
     $timeout(function () {
         mySwiper = new Swiper('.swiper-container', {
             initialSlide: 3,
+            autoplay: {
+                delay: 1200,
+            },
             effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
@@ -22,12 +19,12 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 stretch: 0,
                 depth: 100,
                 modifier: 1,
-              },
+            },
             pagination: {
                 el: '.swiper-pagination',
             },
         })
-    }, 0);
+    }, 10);
 
     $scope.suppliers = [{
         name: "Casey Slusse",
@@ -60,6 +57,18 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         });
     };
 
+    // $scope.openLogin = function () {
+    //     $scope.login = $uibModal.open({
+    //         templateUrl: 'views/modal/login.html',            
+    //         animation: animationsEnabled,
+    //         component: 'modalComponent',
+    //         resolve: {
+    //             items: function () {
+    //                 return items;
+    //             }
+    //         }
+    //     });
+    // }
 
     $scope.rate = 7;
     $scope.max = 10;

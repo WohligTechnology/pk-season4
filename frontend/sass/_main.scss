@@ -137,17 +137,24 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
 @import "other/font-fix";
 //font
 @font-face {
-    src: url('../fonts/Anton/Anton-Regular.ttf');
-    font-family: 'Anton-Regular';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    font-family: Roboto;
 }
-
 @font-face {
-    src: url('../fonts/D-regular/D-regular.otf');
-    font-family: 'D-Regular';
+    src: url('../fonts/D-regular/DIN-Regular/DINCondensed-Bold.ttf');
+    font-family: D-Regular;
 }
-
+@font-face {
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+    font-family: Roboto-Bold;
+}
+@font-face {
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+    font-family: Roboto-Light;
+}
 body {
     // padding-top: 70px;
+    font-family: Roboto;
 }
 
 img.loading {
@@ -189,6 +196,24 @@ footer {
         margin: 0;
     }
 }
+.footer-style{
+    a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+            color: #f2cc2d;
+        }
+    }
+    .border-white{
+        border-bottom: 5px solid #fff;
+    }
+    .footer-img{
+        top: -15px;
+    }
+    .copyright{
+        margin-left: 80px;
+    }
+}
 
 //classes for color
 .yellow-color {
@@ -196,13 +221,17 @@ footer {
 }
 
 .purple-color {
-    color: #071F4E !important;
+    color: #013a67 !important;
 }
 
 //background-color
 .yellow-bg {
     background-color: #F2CB07 !important;
-} //bootstrap forms
+}
+.blue-background{
+    background-color: #013a67;
+}
+ //bootstrap forms
 .input-lg,
 .input-group-lg>.form-control,
 .input-group-lg>.input-group-addon,
@@ -298,12 +327,20 @@ header {
         display: none;
     }
 }
-
 .font-D-Regular{
-font-family: D-Regular;
+    font-family: D-Regular;
+}
+.Roboto-Regular{
+font-family: Roboto;
+}
+.Roboto-Bold{
+    font-family: Roboto-Bold;
 }
 .blue-border{
     border:solid 10px #071f4e;
+}
+.yellow-border{
+    border: 10px solid #ffd45a;
 }
 .blue-border-light{
     border: solid 3px #071f4e;
@@ -328,13 +365,14 @@ font-family: D-Regular;
         min-width: 242px;
     }
     .initial-letter{
-        font-family: 'Anton-Regular';
-        font-size: 100px;
+        font-family: D-Regular;
+        font-size: 110px;
+        margin-top: 20px;
         color: $yellow;
         margin-left: auto;
     }
     .initial-word{
-        font-family: 'Anton-Regular';
+        font-family: D-Regular;
         font-size: 45px;
         line-height: 45px;
         color: #071f4e;
@@ -363,7 +401,7 @@ font-family: D-Regular;
         position: absolute;
         top: -25px;
         left: 30px;
-        font-family: 'D-Regular';
+        font-family: D-Regular;
         h3 {
             font-size: 50px;
             color: #081f4e;
@@ -374,12 +412,17 @@ font-family: D-Regular;
 
     }
 }
-//digital-inside-end
-
-
-// * .div {
-//     width: 200px;
-//     height: 200px;
-//     overflow: auto;
-    
-//   }
+//login scss//
+.login{
+    h2{
+        letter-spacing: 10px;
+    }
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+//end login scss//

@@ -2,7 +2,7 @@
     h2 {
         letter-spacing: 0.1em;
         font-size: 5rem;
-        font-family: 'Anton-Regular';
+        font-family: D-Regular;
     }
     top: 50%;
     left: 50%;
@@ -54,11 +54,11 @@
 .common-title {
     font-size: 3.5rem;
     color: white;
-    font-family: 'D-Regular';
+    font-family: D-Regular;
 }
 
 .common-btn-bg {
-    background: url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/liftedshadow_medium.png) no-repeat 100% 0;
+    background: url(../img/home/button.png) no-repeat 100% 0;
     bottom: -26px;
     height: 26px;
     position: absolute;
@@ -175,7 +175,7 @@
 
 .num-alpha {
     border: 10px solid rgba(255, 212, 90, 1);
-    background: #081f4e;
+    background: #013a67;
     min-height: 210px;
     min-width: 210px;
     cursor: pointer;
@@ -248,7 +248,7 @@ transition: opacity 0.1s ease-in-out;
 
 
 .tb-border {
-    font-family: 'D-Regular';
+    font-family: D-Regular;
     &:before {
         content: "";
         width: 50%;
