@@ -1,18 +1,18 @@
 <div class="p-4 blue-background yellow-border login">
     <div class="container">
-        <h2 class="text-center Roboto-Bold yellow-color">LOGIN TO CONTINUE</h2>
+        <h2 class="text-center mb-4 Roboto-Bold yellow-color">LOGIN TO CONTINUE</h2>
         <form>
             <div class="form-group">
-                <input type="text" ng-model="data.name" class="form-control" id="name" placeholder="NAME" required>
+                <input type="text" ng-model="formData.name" class="form-control" id="name" placeholder="NAME" required>
             </div>
             <div class="form-group">
-                <input type="email" ng-model="data.email" class="form-control" id="email" placeholder="EMAIL" required>
+                <input type="email" ng-model="formData.email" class="form-control" id="email" placeholder="EMAIL" required>
             </div>
             <div class="form-group">
-                <input type="text" ng-model="data.contact" class="form-control" id="contact" placeholder="CONTACT" required only-digits>
+                <input type="text" ng-model="formData.contact" class="form-control" id="contact" placeholder="CONTACT" required only-digits>
             </div>
             <div class="text-right">
-                <button type="submit" class="btn px-5 yellow-bg">ENTER</button>
+                <button type="submit" class="btn px-5 yellow-bg" ng-click="loginSubmit(formdata)">ENTER</button>
             </div>
         </form>
     </div>

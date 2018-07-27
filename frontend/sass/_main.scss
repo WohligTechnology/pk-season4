@@ -140,18 +140,22 @@ $dropdown-box-shadow: 0 .5rem 1rem rgba($black, .175) !default;
     src: url('../fonts/Roboto/Roboto-Regular.ttf');
     font-family: Roboto;
 }
+
 @font-face {
     src: url('../fonts/D-regular/DIN-Regular/DINCondensed-Bold.ttf');
     font-family: D-Regular;
 }
+
 @font-face {
     src: url('../fonts/Roboto/Roboto-Bold.ttf');
     font-family: Roboto-Bold;
 }
+
 @font-face {
     src: url('../fonts/Roboto/Roboto-Light.ttf');
     font-family: Roboto-Light;
 }
+
 body {
     // padding-top: 70px;
     font-family: Roboto;
@@ -191,27 +195,28 @@ a,
 footer {
     font-size: 12px;
     background-color: #eee;
-    padding: 10px 0;
+    padding-top: 10px;
     p {
         margin: 0;
     }
 }
-.footer-style{
-    a{
+
+.footer-style {
+    a {
         text-decoration: none;
         color: white;
-        &:hover{
+        &:hover {
             color: #f2cc2d;
         }
     }
-    .border-white{
+    .border-white {
         border-bottom: 5px solid #fff;
     }
-    .footer-img{
+    .footer-img {
         top: -15px;
     }
-    .copyright{
-        margin-left: 80px;
+    .copyright {
+        margin-left: 50px;
     }
 }
 
@@ -228,10 +233,10 @@ footer {
 .yellow-bg {
     background-color: #F2CB07 !important;
 }
-.blue-background{
+
+.blue-background {
     background-color: #013a67;
-}
- //bootstrap forms
+} //bootstrap forms
 .input-lg,
 .input-group-lg>.form-control,
 .input-group-lg>.input-group-addon,
@@ -292,7 +297,8 @@ footer {
 header {
     transition: all 300ms ease;
 }
-.social-icons{
+
+.social-icons {
     right: 0;
 }
 
@@ -322,38 +328,47 @@ header {
 .ui-select-bootstrap.open .dropdown-menu {
     display: block;
 }
-.header-icons{
-    .display{
+
+.header-icons {
+    .display {
         display: none;
     }
 }
-.font-D-Regular{
+
+.font-D-Regular {
     font-family: D-Regular;
 }
-.Roboto-Regular{
-font-family: Roboto;
+
+.Roboto-Regular {
+    font-family: Roboto;
 }
-.Roboto-Bold{
+
+.Roboto-Bold {
     font-family: Roboto-Bold;
 }
-.blue-border{
-    border:solid 10px #071f4e;
+
+.blue-border {
+    border: solid 10px #013a67;
 }
-.yellow-border{
+
+.yellow-border {
     border: 10px solid #ffd45a;
 }
-.blue-border-light{
-    border: solid 3px #071f4e;
+
+.blue-border-light {
+    border: solid 3px #013a67;
 }
-.white-border{
-    border:solid 10px white;
+
+.white-border {
+    border: solid 10px white;
 }
-.active{
+
+.active {
     color: yellow;
 }
 
 //digital-inside
-.inside-page{
+.inside-page {
     background-image: url("../img/home/home-bg.png");
     background-attachment: fixed;
     background-position: center center;
@@ -364,30 +379,34 @@ font-family: Roboto;
         min-height: 242px;
         min-width: 242px;
     }
-    .initial-letter{
+    .initial-letter {
         font-family: D-Regular;
         font-size: 110px;
         margin-top: 20px;
         color: $yellow;
         margin-left: auto;
     }
-    .initial-word{
+    .initial-word {
         font-family: D-Regular;
         font-size: 45px;
         line-height: 45px;
         color: #071f4e;
     }
-    .digital-tabs{
+    .digital-tabs {
         overflow-x: auto;
     }
-    .digital-text{
+    .digital-text {
         font-size: 36px;
         line-height: 32px;
     }
     .season-common {
         position: relative;
-        border-top: none!important;
+        border-top: none !important;
         border: 5px solid $yellow;
+        .season-scroll{
+        max-height: 50vh;
+        overflow-y: auto;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -408,21 +427,40 @@ font-family: Roboto;
             letter-spacing: 2px;
         }
     }
-    .gallery-images{
-
-    }
+    .gallery-images {}
 }
+
 //login scss//
-.login{
-    h2{
+.login {
+    h2 {
         letter-spacing: 10px;
     }
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    border-radius: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+   background-color: #013a66;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
+
 //end login scss//

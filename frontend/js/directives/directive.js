@@ -102,7 +102,7 @@ myApp.directive('img', function ($compile, $parse) {
         };
     })
 
-    directive('onlyDigits', function () {
+    .directive('onlyDigits', function () {
         return {
             require: 'ngModel',
             restrict: 'A',

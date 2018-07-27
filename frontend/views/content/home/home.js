@@ -1,5 +1,5 @@
 var mySwiper;
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
@@ -14,6 +14,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
+            loop:true,
             coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
@@ -57,18 +58,17 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         });
     };
 
-    // $scope.openLogin = function () {
-    //     $scope.login = $uibModal.open({
-    //         templateUrl: 'views/modal/login.html',            
-    //         animation: animationsEnabled,
-    //         component: 'modalComponent',
-    //         resolve: {
-    //             items: function () {
-    //                 return items;
-    //             }
-    //         }
-    //     });
-    // }
+    //modal example
+    $scope.modalOpen = function () {
+        $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal/login.html',
+            size: 'lg',
+            controller: function ($scope) {
+                $scope.name = 'bottom';
+            }
+        });
+    };
 
     $scope.rate = 7;
     $scope.max = 10;
@@ -97,5 +97,14 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         {
             stateOff: 'glyphicon-off'
         }
+    ];
+
+    $scope.homeSlide = [
+        'img/home/slider1.jpg',
+        'img/home/slider2.jpg',
+        'img/home/slider3.jpg',
+        'img/home/slider4.jpg',
+        'img/home/slider5.jpg',
+        'img/home/slider6.jpg',
     ];
 })
