@@ -9,7 +9,7 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
             $(".img-width-change").css("width", '7%');
 
         } else {
-            $(".img-width-change").css("width", '22%');
+            $(".img-width-change").css("width", '17%');
         }
     });
 });

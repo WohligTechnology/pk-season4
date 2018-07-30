@@ -1,5 +1,5 @@
 var mySwiper;
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal,$state) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $state, apiService) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
@@ -26,7 +26,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
-            loop:true,
+            loop: true,
             coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
@@ -61,29 +61,40 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         img: 'img/mike.png'
     }];
 
-    $scope.submitForm = function (data) {
-        console.log("This is it");
-        return new Promise(function (callback) {
-            $timeout(function () {
-                callback();
-            }, 5000);
-        });
-    };
+//about more modal
+$scope.aboutMore = function () {
+    $scope.aboutModal= $uibModal.open({
+        animation: true,
+        templateUrl: 'views/modal/about.html',
+        scope: $scope,
+        size: 'lg',
+    });
+};
 
     //modal example
     $scope.modalOpen = function () {
-        $uibModal.open({
+        $scope.loginModal= $uibModal.open({
             animation: true,
             templateUrl: 'views/modal/login.html',
+            scope: $scope,
             size: 'lg',
-            controller: function ($scope) {
-                $scope.name = 'bottom';
-            }
         });
     };
 
+    //login function
+    $scope.login = function (data) {
+        console.log("data", data);
+        NavigationService.apiCallWithData("User/saveValidUser", data, function (data) {
+            if (data.value == true) {
+                $state.go("digital-course");
+                $scope.loginModal.close();
+            } else {
+                console.log("invalid Email");
+            }
+        });
+    }
+
     $scope.homeSlide = [
-        // 'img/small-season3/286.jpg',
         'img/small-season3/234.jpg',
         'img/small-season3/235.jpg',
         'img/small-season3/236.jpg',
@@ -110,42 +121,27 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/257.jpg',
         'img/small-season3/258.jpg',
         'img/small-season3/259.jpg',
-        // 'img/small-season3/260.jpg',
         'img/small-season3/261.jpg',
         'img/small-season3/262.jpg',
         'img/small-season3/263.jpg',
         'img/small-season3/264.jpg',
         'img/small-season3/265.jpg',
         'img/small-season3/266.jpg',
-        // 'img/small-season3/267.jpg',
-        // 'img/small-season3/268.jpg',
         'img/small-season3/269.jpg',
         'img/small-season3/270.jpg',
         'img/small-season3/271.jpg',
         'img/small-season3/272.jpg',
-        // 'img/small-season3/273.jpg',
-        // 'img/small-season3/274.jpg',
-        // 'img/small-season3/275.jpg',
         'img/small-season3/276.jpg',
         'img/small-season3/277.jpg',
-        // 'img/small-season3/278.jpg',
-        // 'img/small-season3/279.jpg',
-        // 'img/small-season3/280.jpg',
         'img/small-season3/281.jpg',
         'img/small-season3/282.jpg',
         'img/small-season3/283.jpg',
         'img/small-season3/284.jpg',
-        // 'img/small-season3/285.jpg',
         'img/small-season3/287.jpg',
         'img/small-season3/288.jpg',
         'img/small-season3/289.jpg',
         'img/small-season3/290.jpg',
         'img/small-season3/291.jpg',
-        // 'img/small-season3/292.jpg',
-        // 'img/small-season3/293.jpg',
-        // 'img/small-season3/294.jpg',
-        // 'img/small-season3/295.jpg',
-        // 'img/small-season3/296.jpg',
         'img/small-season3/297.jpg',
         'img/small-season3/298.jpg',
         'img/small-season3/299.jpg',
@@ -153,28 +149,11 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/302.jpg',
         'img/small-season3/303.jpg',
         'img/small-season3/304.jpg',
-        // 'img/small-season3/305.jpg',
-        // 'img/small-season3/306.jpg',
-        // 'img/small-season3/307.jpg',
-        // 'img/small-season3/308.jpg',
-        // 'img/small-season3/309.jpg',
-        // 'img/small-season3/212.jpg',
         'img/small-season3/234.jpg',
         'img/small-season3/233.jpg',
-        // 'img/small-season3/232.jpg',
-        // 'img/small-season3/231.jpg',
-        // 'img/small-season3/230.jpg', ,
-        // 'img/small-season3/227.jpg',
-        // 'img/small-season3/223.jpg',
         'img/small-season3/221.jpg',
         'img/small-season3/220.jpg',
-        // 'img/small-season3/219.jpg',
-        // 'img/small-season3/218.jpg',
-        // 'img/small-season3/217.jpg',
         'img/small-season3/216.jpg',
-        // 'img/small-season3/215.jpg',
-        // 'img/small-season3/214.jpg',
-        // 'img/small-season3/213.jpg',
         'img/small-season3/211.jpg',
         'img/small-season3/181.jpg',
         'img/small-season3/182.jpg',
@@ -206,26 +185,21 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/208.jpg',
         'img/small-season3/209.jpg',
         'img/small-season3/210.jpg',
-        // 'img/small-season3/179.jpg',
         'img/small-season3/161.jpg',
         'img/small-season3/162.jpg',
         'img/small-season3/163.jpg',
         'img/small-season3/164.jpg',
         'img/small-season3/165.jpg',
         'img/small-season3/166.jpg',
-        // 'img/small-season3/167.jpg',
         'img/small-season3/168.jpg',
         'img/small-season3/169.jpg',
         'img/small-season3/170.jpg',
-        // 'img/small-season3/171.jpg',
-        // 'img/small-season3/172.jpg',
         'img/small-season3/173.jpg',
         'img/small-season3/174.jpg',
         'img/small-season3/175.jpg',
         'img/small-season3/176.jpg',
         'img/small-season3/177.jpg',
         'img/small-season3/178.jpg',
-        // 'img/small-season3/180.jpg',
         'img/small-season3/148.jpg',
         'img/small-season3/143.jpg',
         'img/small-season3/144.jpg',
@@ -233,18 +207,13 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/146.jpg',
         'img/small-season3/147.jpg',
         'img/small-season3/149.jpg',
-        // 'img/small-season3/150.jpg',
-        // 'img/small-season3/151.jpg',
         'img/small-season3/152.jpg',
-        // 'img/small-season3/153.jpg',
-        // 'img/small-season3/154.jpg',
         'img/small-season3/155.jpg',
         'img/small-season3/156.jpg',
         'img/small-season3/157.jpg',
         'img/small-season3/158.jpg',
         'img/small-season3/159.jpg',
         'img/small-season3/160.jpg',
-        // 'img/small-season3/127.jpg',
         'img/small-season3/141.jpg',
         'img/small-season3/140.jpg',
         'img/small-season3/139.jpg',
@@ -257,35 +226,21 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/132.jpg',
         'img/small-season3/131.jpg',
         'img/small-season3/130.jpg',
-        // 'img/small-season3/129.jpg',
         'img/small-season3/128.jpg',
-        // 'img/small-season3/126.jpg',
         'img/small-season3/125.jpg',
-        // 'img/small-season3/120.jpg',
-        // 'img/small-season3/124.jpg',
         'img/small-season3/91.jpg',
         'img/small-season3/92.jpg',
-        // 'img/small-season3/93.jpg',
-        // 'img/small-season3/94.jpg',
         'img/small-season3/95.jpg',
         'img/small-season3/96.jpg',
-        // 'img/small-season3/97.jpg',
-        // 'img/small-season3/98.jpg',
-        // 'img/small-season3/99.jpg',
         'img/small-season3/100.jpg',
-        // 'img/small-season3/102.jpg',
         'img/small-season3/106.jpg',
-        // 'img/small-season3/108.jpg',
         'img/small-season3/109.jpg',
         'img/small-season3/110.jpg',
         'img/small-season3/111.jpg',
         'img/small-season3/113.jpg',
         'img/small-season3/114.jpg',
-        // 'img/small-season3/115.jpg',
         'img/small-season3/117.jpg',
-        // 'img/small-season3/118.jpg',
         'img/small-season3/119.jpg',
-        // 'img/small-season3/121.jpg',
         'img/small-season3/122.jpg',
         'img/small-season3/123.jpg',
         'img/small-season3/72.jpg',
@@ -307,42 +262,23 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         'img/small-season3/89.jpg',
         'img/small-season3/90.jpg',
         'img/small-season3/1.jpg',
-        // 'img/small-season3/5.jpg',
         'img/small-season3/7.jpg',
         'img/small-season3/8.jpg',
-        // 'img/small-season3/15.jpg',
-        // 'img/small-season3/17.jpg',
-        // 'img/small-season3/18.jpg',
-        // 'img/small-season3/19.jpg',
         'img/small-season3/21.jpg',
-        // 'img/small-season3/24.jpg',
-        // 'img/small-season3/25.jpg',
-        // 'img/small-season3/26.jpg',
         'img/small-season3/27.jpg',
         'img/small-season3/28.jpg',
-        // 'img/small-season3/29.jpg',
         'img/small-season3/30.jpg',
-        // 'img/small-season3/31.jpg',
-        // 'img/small-season3/32.jpg',
-        // 'img/small-season3/33.jpg',
         'img/small-season3/34.jpg',
         'img/small-season3/35.jpg',
         'img/small-season3/36.jpg',
         'img/small-season3/38.jpg',
-        // 'img/small-season3/39.jpg',
-        // 'img/small-season3/40.jpg',
         'img/small-season3/41.jpg',
         'img/small-season3/42.jpg',
-        // 'img/small-season3/44.jpg',
-        // 'img/small-season3/45.jpg',
-        // 'img/small-season3/46.jpg',
         'img/small-season3/47.jpg',
-        // 'img/small-season3/49.jpg',
         'img/small-season3/53.jpg',
         'img/small-season3/54.jpg',
         'img/small-season3/57.jpg',
         'img/small-season3/58.jpg',
-        // 'img/small-season3/59.jpg',
         'img/small-season3/61.jpg',
         'img/small-season3/62.jpg',
         'img/small-season3/63.jpg',

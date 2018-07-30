@@ -1,8 +1,8 @@
 var schema = new Schema({
     name: {
         type: String,
-        required: true,
         excel: true,
+        require:true
     },
     email: {
         type: String,
@@ -188,6 +188,32 @@ var model = {
      */
     getAllMedia: function (data, callback) {
 
-    }
+    },
+
+    saveValidUser: function (data, callback) {
+        console.log("inside api**********", data)
+        User.findOne({
+            email: data.email
+        }).exec(function (err, found) {
+            console.log("Found: ", found);
+            if (err) {
+                callback(err, null);
+            } else if (_.isEmpty(found)) {
+                User.saveData(data, function (err, found1) {
+                    if (err || _.isEmpty(found1)) {
+                        callback(err, []);
+                    } else {
+                        callback(null, found1);
+                    }
+                });
+                // callback(null, "noDataound");
+            } else {
+                console.log("already present", found);
+                callback(null, found);
+            }
+
+        });
+    },
+
 };
 module.exports = _.assign(module.exports, exports, model);
