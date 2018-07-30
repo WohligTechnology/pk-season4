@@ -9,4 +9,36 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
         apiService.getDemo($scope.formData, function (data) {
             console.log(data);
         });
+    })
+
+    //Footer Controller
+    .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http,$state) {
+        $scope.goToAnchor = function (id) {
+            console.log("inside anchor", id)
+            $state.go('home');
+            if (id) {
+                $timeout(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#' + id).offset().top - 0
+                    }, "slow");
+                }, 500);
+            }
+        };
     });
+// .controller('FooterCtrl', function ($scope, TemplateService, apiService, NavigationService, $timeout) {
+//     console.log("inside anchor")
+//     apiService.getDemo($scope.formData, function (data) {
+//         console.log(data);
+//     });
+//     $scope.goToAnchor = function (id) {
+//         console.log("inside anchor",id)
+//         $state.go('home');
+//         if (id) {
+//             $timeout(function () {
+//                 $('html,body').animate({
+//                     scrollTop: $('#' + id).offset().top - 70
+//                 }, "slow");
+//             }, 500);
+//         }
+//     };
+// });

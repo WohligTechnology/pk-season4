@@ -16,22 +16,22 @@
             <div class="position-absolute home-menu text-center">
                 <ul class="list-unstyled inline-list">
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">HOME</a>
+                        <a class="home-menu-btn d-block text-center" role="button" ng-click="goToAnchor('video')">HOME</a>
                     </li>
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">ABOUT</a>
+                        <a class="home-menu-btn d-block text-center" role="button" ng-click="goToAnchor('about')">ABOUT</a>
                     </li>
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">ACTIVITY</a>
+                        <a class="home-menu-btn d-block text-center" role="button"ng-click="goToAnchor('activity')">ACTIVITY</a>
                     </li>
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">GALLERY</a>
+                        <a class="home-menu-btn d-block text-center" role="button"ng-click="goToAnchor('snippets')">SNIPPETS</a>
                     </li>
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">SNIPPETS</a>
+                        <a class="home-menu-btn d-block text-center" role="button" ng-click="goToAnchor('gallery')">GALLERY</a>
                     </li>
                     <li class="list-inline-item mx-2">
-                        <a class="home-menu-btn d-block text-center" role="button">LATEST BUZZ</a>
+                        <a class="home-menu-btn d-block text-center" role="button" ng-click="goToAnchor('latest-buzz')">LATEST BUZZ</a>
                     </li>
                 </ul>
             </div>
@@ -183,17 +183,6 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" ng-repeat="s in homeSlide track by $index"><img src="{{s}}" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider2.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider3.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider4.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider5.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider6.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider1.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider2.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider3.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider4.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider5.jpg" class="img-fluid"></div>
-                            <div class="swiper-slide"><img src="img/home/slider6.jpg" class="img-fluid"></div>
                         </div>
                     </div>
                     <div ui-sref="photo-gallery" class="text-center">

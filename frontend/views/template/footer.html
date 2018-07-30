@@ -1,15 +1,15 @@
-<footer class="footer-style blue-background">
+<footer class="footer-style blue-background" ng-controller="FooterCtrl">
     <div class="border-white">
         <div class="container">
             <div class="list-footer">
                 <div class="footer-padding">
                     <ol class="d-flex justify-content-around list-unstyled mt-2">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">ACTIVITY</a></li>
-                        <li><a href="#">GALLERY</a></li>
-                        <li><a href="#">SNIPPETS</a></li>
-                        <li><a href="#">LATEST BUZZ</a></li>
+                        <li><a href="#" ng-click="goToAnchor('video')">HOME</a></li>
+                        <li><a href="#" ng-click="goToAnchor('about')">ABOUT</a></li>
+                        <li><a href="#" ng-click="goToAnchor('activity')">ACTIVITY</a></li>
+                        <li><a href="#" ng-click="goToAnchor('snippets')">SNIPPETS</a></li>
+                        <li><a href="#" ng-click="goToAnchor('gallery')">GALLERY</a></li>
+                        <li><a href="#" ng-click="goToAnchor('latest-buzz')">LATEST BUZZ</a></li>
                     </ol>
                 </div>
             </div>
