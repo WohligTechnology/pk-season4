@@ -403,9 +403,9 @@ header {
         position: relative;
         border-top: none !important;
         border: 5px solid $yellow;
-        .season-scroll{
-        max-height: 50vh;
-        overflow-y: auto;
+        .season-scroll {
+            max-height: 50vh;
+            overflow-y: auto;
         }
         &:before {
             content: '';
@@ -431,15 +431,64 @@ header {
 }
 
 //gallery inside
-.fancy-image{
+.fancy-image {
     height: 80px;
 }
-//end gallery inside
 
+//end gallery inside
+//latest-inside
+.latest-inside {
+    .blog-title {
+        @extend .purple-color;
+        text-transform: uppercase;
+        padding-top: 60px;
+    }
+    p {
+        font-size: 14px;
+        text-align: justify;
+    }
+    .all-blogs {
+        margin-top: 60px;
+        height: 70vh;
+        overflow: auto;
+        direction: rtl;
+    }
+    .blog {
+        border-bottom: solid 2px #013a67;
+        padding: 10px 5px;
+        cursor: pointer;
+        direction: ltr;
+    }
+    .blog:last-child{
+        border-bottom:0px;
+    }
+    article{
+        h5{
+            text-transform: uppercase;
+            @extend .purple-color;
+        }
+    }
+}
+
+//end latest-inside
 //login scss//
 .login {
+    position: relative;
     h2 {
         letter-spacing: 10px;
+    }
+    .close-modal {
+        width: 30px;
+        height: 30px;
+        color: #013a67;
+        background-color: white;
+        border: solid 3px rgba(255, 212, 90, 1);
+        padding: 1px 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: -21px;
+        right: -21px;
+        cursor: pointer;
     }
 }
 
@@ -458,7 +507,7 @@ header {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-   background-color: #013a66;
+    background-color: #013a66;
 }
 
 input[type=number]::-webkit-inner-spin-button,

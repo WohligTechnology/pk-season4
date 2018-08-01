@@ -12,7 +12,7 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
     })
 
     //Footer Controller
-    .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http,$state) {
+    .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $state,$uibModal) {
         $scope.goToAnchor = function (id) {
             console.log("inside anchor", id)
             $state.go('home');
@@ -23,6 +23,15 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
                     }, "slow");
                 }, 500);
             }
+        };
+        //modal example
+        $scope.modalOpen = function () {
+            $scope.loginModal = $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/login.html',
+                scope: $scope,
+                size: 'lg',
+            });
         };
     });
 // .controller('FooterCtrl', function ($scope, TemplateService, apiService, NavigationService, $timeout) {

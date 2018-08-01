@@ -52,5 +52,6 @@ module.exports = [
   'frontend/views/content/digital/digital.js',  
   'frontend/views/content/contest/contest.js', 
   'frontend/views/content/gallery/gallery.js',    
+  'frontend/views/content/latest-buzz/latest-buzz.js',    
   'frontend/js/controllers/language-controller.js',
 ];

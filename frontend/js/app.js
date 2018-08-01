@@ -39,6 +39,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'GalleryCtrl'
         })
+        .state('latest-buzz', {
+            url: "/latest-buzz",
+            templateUrl: tempateURL,
+            controller: 'LatestCtrl'
+        })
         .state('links', {
             url: "/links",
             templateUrl: tempateURL,
