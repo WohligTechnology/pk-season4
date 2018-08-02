@@ -7,9 +7,11 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
     $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
             $(".img-width-change").css("width", '7%');
+            $(".navbar-color-change").css("background", 'rgba(0, 0, 0, 0.54)');
 
         } else {
-            $(".img-width-change").css("width", '17%');
+            $(".img-width-change").css("width", '19%');
+            $(".navbar-color-change").css("background", 'transparent');
         }
     });
 });

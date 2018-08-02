@@ -299,13 +299,17 @@ header {
 }
 
 .social-icons {
-    right: 0;
+    top: -20px;
+    right: -10px;
+    z-index: 1;
 }
 
 .nav-up {
     transform: translateY(-100%);
 }
-
+.navbar{
+    padding: 0;
+}
 .fa-svg-icon {
     display: inline-block;
     vertical-align: middle;
@@ -348,7 +352,7 @@ header {
 }
 
 .blue-border {
-    border: solid 10px #013a67;
+    border: solid 10px #013a67 !important;
 }
 
 .yellow-border {

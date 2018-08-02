@@ -61663,7 +61663,7 @@ myApp.filter('myFilter', function () {
 
 ;
 myApp.service('TemplateService', function () {
-    this.title = "Home";
+    this.title = "Season4";
     this.meta = "";
     this.metadesc = "";
 
