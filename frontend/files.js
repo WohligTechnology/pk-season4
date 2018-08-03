@@ -18,6 +18,7 @@ module.exports = [
   'bower_components/angular-translate/angular-translate.js',
   'bower_components/angular-ui-select/dist/select.min.js',
   'bower_components/lodash/lodash.js',
+  'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/angulartics/dist/angulartics.min.js',
   'bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js',
   "bower_components/angular-toastr/dist/angular-toastr.js",
@@ -45,7 +46,7 @@ module.exports = [
   'frontend/js/factories/navigation.js',
   'frontend/js/factories/api.js',
 
-  // Contorllers
+  // Controllers
   'frontend/js/controllers/controller.js',
   'frontend/views/content/home/home.js',
   'frontend/js/controllers/header-controller.js',

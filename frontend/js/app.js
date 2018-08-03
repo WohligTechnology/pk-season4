@@ -9,7 +9,8 @@ var myApp = angular.module('myApp', [
     'ngSanitize',
     'ui.select',
     'angularPromiseButtons',
-    'toastr'
+    'toastr',
+    'duScroll'
 ]);
 
 // Define all the routes below
@@ -40,7 +41,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'GalleryCtrl'
         })
         .state('latest-buzz', {
-            url: "/latest-buzz",
+            url: "/latest-buzz/:name",
             templateUrl: tempateURL,
             controller: 'LatestCtrl'
         })
@@ -48,7 +49,12 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: "/links",
             templateUrl: tempateURL,
             controller: 'LinksCtrl'
-        });
+        })
+        .state('homeid', {
+            url: "/:id",
+            templateUrl: tempateURL,
+            controller: 'HomeCtrl'
+        });;
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(isproduction);
 });

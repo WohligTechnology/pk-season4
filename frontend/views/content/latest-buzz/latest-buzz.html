@@ -1,10 +1,17 @@
-<div class="latest-inside py-5">
+<div class="inside-page latest-inside py-5">
+        <div class="d-flex align-items-center px-5 pt-2">
+                <div class="initial-letter">#L</div>
+                <div class="ml-2 initial-word">
+                    <div>Latest</div>
+                    <div>Buzz</div>
+                </div>
+            </div>
     <div class="container">
-        <h3 class="text-uppercase text-center common-title purple-color m-0">LATEST&nbsp;
+        <!-- <h3 class="text-uppercase text-center common-title purple-color m-0">LATEST&nbsp;
             <span class="yellow-color">BUZZ</span>
-        </h3>
+        </h3> -->
         <div class="row">
-            <div class="col-12 col-lg-8" ng-init="blog='stock-market'">
+            <div class="col-12 col-lg-8">
                 <article ng-if="blog=='stock-market'">
                     <div class="social-media"></div>
                     <h4 class="blog-title">Learn About Stock Markets Without Risking Your Money</h4>
@@ -493,40 +500,40 @@
             </div>
             <div class="col-12 col-lg-4">
                 <div class="pl-3 all-blogs">
-                        <div class="blog" ng-click="blog='stock-market'">
+                        <div class="blog" ng-click="changeBlog('stock-market')">
                                 <h5>Learn About Stock Markets Without Risking Your Money</h5>
                             </div>
-                    <div class="blog" ng-click="blog='5big-mistakes'">
+                    <div class="blog" ng-click="changeBlog('5big-mistakes')">
                         <h5>5 Big Mistakes That Investors Make And Its Impact</h5>
                     </div>
-                    <div class="blog" ng-click="blog='budget-2018'">
+                    <div class="blog" ng-click="changeBlog('budget-2018')">
                         <h5>12 Things About The Budget-2018, Related To The Middle Class</h5>
                     </div>
-                    <div class="blog" ng-click="blog='fake-gst'">
+                    <div class="blog" ng-click="changeBlog('fake-gst')">
                         <h5>How To Check A Fake GST Number? </h5>
                     </div>
-                    <div class="blog" ng-click="blog='bank-balance'">
+                    <div class="blog" ng-click="changeBlog('bank-balance')">
                         <h5>How To Check Your Bank Balance On The Phone Without Internet</h5>
                     </div>
-                    <div class="blog" ng-click="blog='tax-return'">
+                    <div class="blog" ng-click="changeBlog('tax-return')">
                         <h5>Do I Need To File My Income Tax Return ?</h5>
                     </div>
-                    <div class="blog" ng-click="blog='buy-healthinsurance'">
+                    <div class="blog" ng-click="changeBlog('buy-healthinsurance')">
                         <h5>Things To Keep In Mind Before Buying Health Insurance</h5>
                     </div>
-                    <div class="blog" ng-click="blog='save-moretax'">
+                    <div class="blog" ng-click="changeBlog('save-moretax')">
                         <h5>How To Save More Tax !</h5>
                     </div>
-                    <div class="blog" ng-click="blog='save-money'">
+                    <div class="blog" ng-click="changeBlog('save-money')">
                         <h5>15 Tricks To Save Money ! </h5>
                     </div>
-                    <div class="blog" ng-click="blog='cc-limit-enhancement'">
+                    <div class="blog" ng-click="changeBlog('cc-limit-enhancement')">
                         <h5>Credit Card Limit Enhancement - Good Or Bad ?</h5>
                     </div>
-                    <div class="blog" ng-click="blog='home-purchase'">
+                    <div class="blog" ng-click="changeBlog('home-purchase')">
                         <h5>How To Plan A Home Purchase ?</h5>
                     </div>
-                    <div class="blog" ng-click="blog='retirement-savings'">
+                    <div class="blog" ng-click="changeBlog('retirement-savings')">
                         <h5>5 Ways To Boost Retirement Savings</h5>
                     </div>
                 </div>

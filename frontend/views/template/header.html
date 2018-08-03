@@ -14,9 +14,36 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" ng-include="template.menu"></ul>
             </div>
+            <div class="w-25 position-absolute google-custom-search">
+                <script>
+                    (function () {
+                        var cx = '015001778397049072926:xavmhhy0tiy';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+            <div class="w-25 position-absolute translate-language">
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en',
+                            includedLanguages: 'hi,mr',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
         </div>
         <div class="position-absolute social-icons my-4 display">
-            <div class="ml-2 purple-color">Share</div>
+            <div class="ml-2 text-white">Share</div>
             <a href="https://www.facebook.com/pehlakadam04/" target="_blank">
                 <!-- <i class="fab fa-facebook-f"></i> -->
                 <img width="35%" src="img/header/facebook.png" class="img-fluid">

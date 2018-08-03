@@ -1,18 +1,14 @@
 var mySwiper;
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $state, apiService,$location) {
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $uibModal, $state, apiService,$location,$document) {
     $scope.template = TemplateService.getHTML("content/home/home.html");
     TemplateService.title = "Home"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
 
     $scope.goToAnchor = function (id) {
-        $state.go('home');
-        if (id) {
-            $timeout(function () {
-                $('html,body').animate({
-                    scrollTop: $('#' + id).offset().top - 0
-                }, "slow");
-            }, 500);
-        }
+        var someElement = angular.element(document.getElementById(id));
+        $document.scrollToElement(someElement, 70, 500);
+        console.log(id);
+        $location.path("/" + id);
     };
 
     $timeout(function () {
@@ -67,6 +63,7 @@ $scope.aboutMore = function () {
         templateUrl: 'views/modal/about.html',
         scope: $scope,
         size: 'lg',
+        backdrop:'static',
     });
 };
 
@@ -77,6 +74,7 @@ $scope.aboutMore = function () {
             templateUrl: 'views/modal/login.html',
             scope: $scope,
             size: 'lg',
+            backdrop:'static',
         });
     };
 

@@ -12,17 +12,26 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
     })
 
     //Footer Controller
-    .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $state,$uibModal) {
+    .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $state,$uibModal,$document,$location) {
+        // $scope.goToAnchor = function (id) {
+        //     console.log("inside anchor", id)
+        //     $state.go('home');
+        //     if (id) {
+        //         $timeout(function () {
+        //             $('html,body').animate({
+        //                 scrollTop: $('#' + id).offset().top - 70
+        //             }, "slow");
+        //         }, 500);
+        //     }
+        // };
         $scope.goToAnchor = function (id) {
-            console.log("inside anchor", id)
-            $state.go('home');
-            if (id) {
-                $timeout(function () {
-                    $('html,body').animate({
-                        scrollTop: $('#' + id).offset().top - 0
-                    }, "slow");
-                }, 500);
-            }
+            $state.go("home");
+            $timeout(function(){
+            var someElement = angular.element(document.getElementById(id));
+            $document.scrollToElement(someElement, 70, 500);
+            console.log(id);
+            $location.path("/" + id);
+        },700);
         };
         //modal example
         $scope.modalOpen = function () {
