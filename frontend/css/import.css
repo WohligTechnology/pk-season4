@@ -9460,9 +9460,6 @@ header {
   .google-custom-search .gsc-control-cse {
     background-color: transparent;
     border: 0; }
-  .google-custom-search .gsc-search-button-v2 {
-    border-color: #012a49;
-    background-color: #012947; }
 
 .translate-language {
   top: 20px;
@@ -9596,6 +9593,9 @@ header {
 .latest-inside p {
   font-size: 14px;
   text-align: justify; }
+
+.latest-inside article {
+  margin-top: 10px; }
 
 .latest-inside .all-blogs {
   margin-top: 10px;
@@ -9823,7 +9823,7 @@ input[type=number]::-webkit-outer-spin-button {
 .num-alpha {
   border: 10px solid #ffd45a;
   background: #013a67;
-  min-height: 210px;
+  min-height: 250px;
   min-width: 210px;
   cursor: pointer; }
   .num-alpha .num-alpha-hover {
