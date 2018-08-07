@@ -26,7 +26,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'HomeCtrl'
         })
         .state('digital-course', {
-            url: "/digital-course",
+            url: "/digital-course/:userId",
             templateUrl: tempateURL,
             controller: 'DigitalCtrl'
         })

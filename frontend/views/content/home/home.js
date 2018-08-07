@@ -82,8 +82,11 @@ $scope.aboutMore = function () {
     $scope.login = function (data) {
         console.log("data", data);
         NavigationService.apiCallWithData("DigitalUser/saveValidUser", data, function (data) {
-            if (data.value == true) {
-                $state.go("digital-course");
+            console.log("%%%%%%%%%%%%%%%%%%%%%%%", data)
+            if (data.data._id) {
+                $state.go("digital-course", {
+                    'userId': data.data._id
+                });
                 $scope.loginModal.close();
             } else {
                 console.log("invalid Email");

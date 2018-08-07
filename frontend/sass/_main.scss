@@ -215,14 +215,11 @@ footer {
     .footer-img {
         top: -15px;
     }
-    .copyright {
-        margin-left: 50px;
-    }
 }
 
 //classes for color
 .yellow-color {
-    color: #F2CB07 !important;
+    color: #fed530 !important;
 }
 
 .purple-color {
@@ -231,7 +228,7 @@ footer {
 
 //background-color
 .yellow-bg {
-    background-color: #F2CB07 !important;
+    background-color: #fed530 !important;
 }
 
 .blue-background {
@@ -299,11 +296,22 @@ header {
 }
 
 .google-custom-search {
-    top: 5px;
-    right: 16%;
+    top: 0;
+    left: 29%;
     .gsc-control-cse {
+        // margin-top: 10px;
         background-color: transparent;
         border: 0;
+    }
+    .gsc-input-box {
+        background-color: transparent;
+        border-radius: 5px;
+        input{
+            background-color: transparent;
+        }
+    }
+    .gsc-control-cse{
+        padding: 0;
     }
     // .gsc-search-button-v2 {
     //     border-color: #012a49;
@@ -315,8 +323,9 @@ header {
     //for select tag
 }
 .translate-language {
-    top: 20px;
-    right: -9%;
+    // margin-top: 12px;
+    top: 0;
+    right: 20%;
     .goog-te-gadget-simple {
         img {
             display: none;
@@ -341,8 +350,8 @@ header {
 }
 
 .social-icons {
-    top: -20px;
-    right: -10px;
+    top: -6px;
+    right: 0px;
     z-index: 1;
 }
 
@@ -442,6 +451,7 @@ header {
     .digital-text {
         font-size: 36px;
         line-height: 32px;
+        font-family: D-Regular;
     }
     .season-common {
         position: relative;
@@ -480,6 +490,15 @@ header {
 }
 
 //end gallery inside
+
+//partners 
+#partners{
+    .common-btn-bg{
+        width: 100%;
+    }
+}
+//end partners
+
 //latest-inside
 .latest-inside {
     .blog-title {
@@ -492,10 +511,10 @@ header {
         text-align: justify;
     }
     article{
-        margin-top:10px;
+        margin-top:-50px;
     }
     .all-blogs {
-        margin-top: 10px;
+        // margin-top: 10px;
         height: 70vh;
         overflow: auto;
         direction: rtl;
