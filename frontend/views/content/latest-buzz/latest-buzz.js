@@ -3,6 +3,8 @@ myApp.controller('LatestCtrl', function ($scope, TemplateService, NavigationServ
     TemplateService.title = "Latest Buzz"; //This is the Title of the Website
     $scope.navigation = NavigationService.getNavigation();
     TemplateService.cssMain = "header-icons";
+    $scope.myUrl = $location.absUrl();
+    console.log("$scope.myUrl",$scope.myUrl);
     $scope.blogs = [{
         id: "stock-market",
         title: "Learn About Stock Markets Without Risking Your Money",

@@ -217,6 +217,12 @@ footer {
     }
 }
 
+.header-icons{
+    .overlay {
+        display: none;
+    }
+}
+
 //classes for color
 .yellow-color {
     color: #fed530 !important;
@@ -295,6 +301,45 @@ header {
     transition: all 300ms ease;
 }
 
+.overlay {
+    top: 0;
+    left: 0;
+    background-color: rgba(1,58,103,0.95);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    .overlay_content {
+        position: fixed;
+        top: 18%;
+        .quote-text {
+            margin-top: 25px;
+            width: 20%;
+            color: white;
+            font-size: 50px;
+            line-height: 50px;
+            font-family: D-Regular;
+        }
+        .quote {
+            width: 35%;
+            @extend .text-white;
+            font-size: 30px;
+            line-height: 30px;
+            font-family: Roboto-Light;
+            blockquote {
+                font-size: 20px;
+            }
+        }
+    }
+    h2 {
+        position: fixed;
+        font-family: D-Regular;
+        right: 6%;
+        @extend .text-white;
+        cursor: pointer;
+    }
+}
+
 .google-custom-search {
     top: 0;
     left: 29%;
@@ -306,14 +351,13 @@ header {
     .gsc-input-box {
         background-color: transparent;
         border-radius: 5px;
-        input{
+        input {
             background-color: transparent;
         }
     }
-    .gsc-control-cse{
+    .gsc-control-cse {
         padding: 0;
-    }
-    // .gsc-search-button-v2 {
+    } // .gsc-search-button-v2 {
     //     border-color: #012a49;
     //     background-color: #012947;
     // }
@@ -322,6 +366,7 @@ header {
 .header-icons {
     //for select tag
 }
+
 .translate-language {
     // margin-top: 12px;
     top: 0;
@@ -340,7 +385,7 @@ header {
         }
     }
     .goog-te-menu-value {
-        span{
+        span {
             color: white !important;
         }
         span:nth-child(3) {
@@ -385,7 +430,6 @@ header {
 .ui-select-bootstrap.open .dropdown-menu {
     display: block;
 }
-
 
 .font-D-Regular {
     font-family: D-Regular;
@@ -490,15 +534,14 @@ header {
 }
 
 //end gallery inside
-
 //partners 
-#partners{
-    .common-btn-bg{
+#partners {
+    .common-btn-bg {
         width: 100%;
     }
 }
-//end partners
 
+//end partners
 //latest-inside
 .latest-inside {
     .blog-title {
@@ -510,8 +553,8 @@ header {
         font-size: 14px;
         text-align: justify;
     }
-    article{
-        margin-top:-50px;
+    article {
+        margin-top: -50px;
     }
     .all-blogs {
         // margin-top: 10px;

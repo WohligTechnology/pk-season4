@@ -1,4 +1,4 @@
-myApp.controller('headerCtrl', function ($scope, TemplateService) {
+myApp.controller('headerCtrl', function ($scope, TemplateService,$timeout) {
     $scope.template = TemplateService;
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
@@ -14,4 +14,15 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
             $(".navbar-color-change").css("background", 'transparent');
         }
     });
+    $scope.showQuotes = $.jStorage.get("showQuotes");
+    
+    $scope.closeOverlay = function () {
+        $.jStorage.set("showQuotes",true);        
+        console.log("**********************");
+        $("#overlay").hide();
+    }
+    
+    // $timeout(function(){
+    //     $("#overlay").hide();
+    // },18000)
 });

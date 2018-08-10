@@ -31,3 +31,6 @@ myApp.filter('indianCurrency', function () {
     }
   }
 });
+myApp.filter('urlEncode', [function () {
+  return window.encodeURIComponent;
+}]);

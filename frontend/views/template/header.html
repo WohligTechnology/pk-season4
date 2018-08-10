@@ -1,9 +1,23 @@
-<header>
-    <nav class="navbar navbar-expand-md  navbar-light fixed-top px-0 navbar-color-change">
+<header ng-controller="headerCtrl">
+    <div id="overlay" class="p-5 overlay" ng-if="!showQuotes" >
+        <h2 ng-click="closeOverlay()">CONTINUE TO SITE<i class="fas fa-angle-right ml-3"></i></h2>
+        <div class="overlay_content">
+            <div class="my-auto mx-auto"><img src="img/header/logo.png" alt="logo" width="14%"></div>
+            <div class="quote-text">
+                <div>QUOTE OF</div>
+                <div class="text-right">THE DAY</div>
+            </div>
+            <div class="quote">
+                If you hold yourself back, you’re doing a disservice to the team.
+                <blockquote class="text-right mt-3"><i>- Sharfi Farhana,<br> Director of Talent at IAC</i></blockquote>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top px-0 navbar-color-change">
         <div class="container-fluid">
             <div class="">
-                <a class="navbar-brand" ui-sref="home">
-                    <img src="img/header/logo.png" alt="logo" width="13%" class="d-block img-width-change">
+                <a class="navbar-brand d-inline" ui-sref="home">
+                    <img src="img/header/logo.png" alt="logo" width="13%" class="img-width-change">
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -13,16 +27,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" ng-include="template.menu"></ul>
             </div>
-        </div>
-        <div class="position-absolute social-icons my-4 display">
-            <a class="mr-1" href="https://www.facebook.com/pehlakadam04/" target="_blank">
-                <!-- <i class="fab fa-facebook-f"></i> -->
-                <img width="38%" src="img/header/facebook.png" class="img-fluid">
-            </a>
-            <a href="https://twitter.com/pehlakadam" target="_blank">
-                <!-- <i class="fab fa-twitter"></i> -->
-                <img width="38%" src="img/header/twitter.png" class="img-fluid">
-            </a>
+            <div class="position-absolute social-icons my-4 display">
+                <a class="mr-1" href="https://www.facebook.com/pehlakadam04/" target="_blank">
+                    <!-- <i class="fab fa-facebook-f"></i> -->
+                    <img width="38%" src="img/header/facebook.png" class="img-fluid">
+                </a>
+                <a href="https://twitter.com/pehlakadam" target="_blank">
+                    <!-- <i class="fab fa-twitter"></i> -->
+                    <img width="38%" src="img/header/twitter.png" class="img-fluid">
+                </a>
+            </div>
         </div>
     </nav>
 </header>

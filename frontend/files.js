@@ -6,6 +6,7 @@ module.exports = [
   'bower_components/smart-app-banner/smart-app-banner.js',
   "bower_components/moment/min/moment.min.js",
   "bower_components/font-awesome/svg-with-js/js/fontawesome-all.min.js",
+  "bower_components/jStorage/jstorage.min.js",
 
 
   //Angular Libs

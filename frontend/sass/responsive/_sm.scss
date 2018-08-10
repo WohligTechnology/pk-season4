@@ -1,3 +1,7 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-up(sm) {
+    .video{
+        width: 100%;
+    }
+}
