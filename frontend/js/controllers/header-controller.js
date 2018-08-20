@@ -21,8 +21,4 @@ myApp.controller('headerCtrl', function ($scope, TemplateService,$timeout) {
         console.log("**********************");
         $("#overlay").hide();
     }
-    
-    // $timeout(function(){
-    //     $("#overlay").hide();
-    // },18000)
 });

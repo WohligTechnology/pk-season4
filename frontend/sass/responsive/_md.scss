@@ -1,3 +1,28 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+    .social-icons{
+        top: -18px;
+    }
+    .activity-space{
+        padding: 0;
+    }
+    .inside-page .season-common:before {
+        width: 68%;
+    }
+    .fancy-image {
+        height: 100px;
+    }
+    .partners-padding{
+        padding: 0 !important;
+    }
+    .social-iframe{
+        width: 311px;
+    }
+    .twitter-width{
+        width: 330px;
+    }
+    .google-custom-search {
+        width: 100%;
+    }
+}

@@ -1,3 +1,14 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+    .video{
+        width: 100%;
+    }
+    .inside-page .num-alpha {
+        min-height: 225px;
+        min-width: 225px;
+    }
+    .navbar-toggler collapsed{
+        display: none;
+    }
+}

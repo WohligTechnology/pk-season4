@@ -200,7 +200,9 @@ footer {
         margin: 0;
     }
 }
-
+.overflow-class{
+    overflow-x: auto;
+}
 .footer-style {
     a {
         text-decoration: none;
@@ -341,8 +343,7 @@ header {
 }
 
 .google-custom-search {
-    top: 0;
-    left: 29%;
+    width: 25%;
     .gsc-control-cse {
         // margin-top: 10px;
         background-color: transparent;
@@ -368,9 +369,8 @@ header {
 }
 
 .translate-language {
-    // margin-top: 12px;
-    top: 0;
-    right: 20%;
+    // top: 0;
+    // right: 20%;
     .goog-te-gadget-simple {
         img {
             display: none;
@@ -538,6 +538,9 @@ header {
 #partners {
     .common-btn-bg {
         width: 100%;
+    }
+    .partners-padding{
+        padding: 0 3rem;
     }
 }
 
