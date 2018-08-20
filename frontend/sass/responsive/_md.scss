@@ -3,6 +3,7 @@
 @include media-breakpoint-down(md) {
     .social-icons{
         top: -18px;
+        width: 30%;
     }
     .activity-space{
         padding: 0;
@@ -24,5 +25,8 @@
     }
     .google-custom-search {
         width: 100%;
+    }
+    .home-menu li {
+        width: 25%;
     }
 }
