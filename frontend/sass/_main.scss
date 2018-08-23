@@ -475,8 +475,8 @@ header {
     background-size: cover;
     min-height: 94vh;
     .num-alpha {
-        min-height: 242px;
-        min-width: 242px;
+        height: 242px;
+        width: 242px;
     }
     .initial-letter {
         font-family: D-Regular;
@@ -555,7 +555,7 @@ header {
         text-transform: uppercase;
         padding-top: 10px;
     }
-    p {
+    li,p {
         font-size: 14px;
         text-align: justify;
     }

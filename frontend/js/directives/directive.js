@@ -180,7 +180,7 @@ myApp.directive('img', function ($compile, $parse) {
             restrict: 'A',
             link: function (scope, element, attr, ngModelCtrl) {
                 function fromUser(text) {
-                    var transformedInput = text.replace(/[^a-zA-Z]/g, '');
+                    var transformedInput = text.replace(/[^a-zA-Z\s]/g, '');
                     //console.log(transformedInput);
                     if (transformedInput !== text) {
                         ngModelCtrl.$setViewValue(transformedInput);

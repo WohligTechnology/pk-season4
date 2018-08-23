@@ -32,7 +32,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 el: '.swiper-pagination',
             },
         })
-    }, 10);
+    }, 100);
 
     $scope.suppliers = [{
         name: "Casey Slusse",

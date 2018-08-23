@@ -31,7 +31,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'DigitalCtrl'
         })
         .state('contest-hub', {
-            url: "/contest-hub",
+            url: "/1minute-tips",
             templateUrl: tempateURL,
             controller: 'ContestCtrl'
         })
