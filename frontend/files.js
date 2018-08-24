@@ -52,6 +52,7 @@ module.exports = [
   'frontend/views/content/home/home.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/views/content/digital/digital.js',  
+  'frontend/views/content/digital-question/digital-question.js',    
   'frontend/views/content/contest/contest.js', 
   'frontend/views/content/gallery/gallery.js',    
   'frontend/views/content/latest-buzz/latest-buzz.js',    

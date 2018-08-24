@@ -6,7 +6,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
     $scope.goToAnchor = function (id) {
         var someElement = angular.element(document.getElementById(id));
-        $document.scrollToElement(someElement, 70, 500);
+        $document.scrollToElement(someElement, 70, 2500);
         console.log(id);
         $location.path("/" + id);
     };
@@ -15,7 +15,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         mySwiper = new Swiper('.swiper-container', {
             initialSlide: 3,
             autoplay: {
-                delay: 1200,
+                delay: 1700,
             },
             effect: 'coverflow',
             grabCursor: true,

@@ -14,11 +14,4 @@ myApp.controller('headerCtrl', function ($scope, TemplateService,$timeout) {
             $(".navbar-color-change").css("background", 'transparent');
         }
     });
-    $scope.showQuotes = $.jStorage.get("showQuotes");
-    
-    $scope.closeOverlay = function () {
-        $.jStorage.set("showQuotes",true);        
-        console.log("**********************");
-        $("#overlay").hide();
-    }
 });

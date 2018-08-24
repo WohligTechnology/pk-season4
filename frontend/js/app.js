@@ -21,14 +21,24 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
         .state('home', {
-            url: "/",
+            url: "/home",
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
+        })
+        .state('thought-of-the-day', {
+            url: "/",
+            templateUrl: tempateURL,
+            controller: 'ThoughtCtrl'
         })
         .state('digital-course', {
             url: "/digital-course/:userId",
             templateUrl: tempateURL,
             controller: 'DigitalCtrl'
+        })
+        .state('digital-question', {
+            url: "/digital-question/:userId",
+            templateUrl: tempateURL,
+            controller: 'DigitalQuestionCtrl'
         })
         .state('contest-hub', {
             url: "/1minute-tips",
