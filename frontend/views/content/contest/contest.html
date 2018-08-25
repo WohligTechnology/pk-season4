@@ -21,11 +21,11 @@
             <div class="row">
                 <div class="col-12 col-md-2" ng-repeat="itemSeason in season4 | filter: searchName">
                     <div class="position-relative">
-                        <a data-fancybox="gallery" class="" ng-href="https://www.youtube.com/embed/{{itemSeason.videoUrl}}?autoplay=1"
-                            rel="gal" fancybox-box>
-                                    <img ng-src="http://img.youtube.com/vi/{{itemSeason.imageUrl}}/hqdefault.jpg" class="img-fluid fancy-image">
-                                    <img class="video-icon" src="img/youtube-small.png" class="img-fluid">
-                                </a>
+                        <a data-fancybox="gallery" class="" ng-href="https://www.youtube.com/embed/{{itemSeason.videoUrl}}?autoplay=1" rel="gal"
+                            fancybox-box>
+                                        <img ng-src="http://img.youtube.com/vi/{{itemSeason.videoUrl}}/hqdefault.jpg" class="img-fluid">
+                                        <img class="video-icon" src="img/youtube-small.png" class="img-fluid">
+                                    </a>
                     </div>
                     <div class="text-center purple-color">{{itemSeason.episodeno}}<br>{{itemSeason.searchName}}</div>
                 </div>

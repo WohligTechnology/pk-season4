@@ -42,7 +42,7 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
                 $document.scrollToElement(someElement, 70, 1500);
                 console.log(id);
                 $location.path("/" + id);
-            }, 1000);
+            }, 800);
         };
         //modal example
         $scope.modalOpen = function () {
