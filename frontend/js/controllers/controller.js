@@ -35,14 +35,16 @@ myApp.controller('LinksCtrl', function ($scope, TemplateService, NavigationServi
 
     //Footer Controller
     .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http, $state, $uibModal, $document, $location) {
+        console.log("inside footer ctrl");
         $scope.goToAnchor = function (id) {
             $state.go("home");
+            console.log("went to home 8000");
             $timeout(function () {
                 var someElement = angular.element(document.getElementById(id));
-                $document.scrollToElement(someElement, 70, 1500);
+                $document.scrollToElement(someElement, 70, 1000);
                 console.log(id);
                 $location.path("/" + id);
-            }, 800);
+            }, 8000);
         };
         //modal example
         $scope.modalOpen = function () {

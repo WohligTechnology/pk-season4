@@ -1,5 +1,18 @@
 /* Breakpoint for medium viewport */
 
-@include media-breakpoint-up(sm) {
-    
+@include media-breakpoint-down(sm) {
+    .overlay .overlay_content {
+        .quote-text {
+            width: 60%;
+        }
+        .quote {
+            width: 96%;
+        }
+    }
+    .inside-page .season-common:before {
+        width: 32%;
+    }
+    .fancy-image {
+        height: 70px;
+    }
 }

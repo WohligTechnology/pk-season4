@@ -1,9 +1,16 @@
 /* Breakpoint for medium viewport */
 
 @include media-breakpoint-down(md) {
+    .overlay .overlay_content .quote-text {
+        width: 30%;
+    }
     .social-icons{
         top: -18px;
         width: 30%;
+        right: -40px;
+        img{
+            width: 25%;
+        }
     }
     .activity-space{
         padding: 0;
@@ -32,5 +39,29 @@
     .inside-page .num-alpha {
         height: 225px;
         width: 225px;
+    }
+    .latest-inside article{
+        margin-top: 0;
+    }
+    footer{
+        li{
+            display: inline-block;
+            width: 24%;
+            &:after{
+                content: '';
+                border-right: solid 1px white;
+                padding-left: 10px;
+            }
+        }
+        li:last-child{
+            &:after{
+                content: '';
+                border-right: 0;
+                padding-left: 0;
+            }
+        }
+    }
+    .digital-top-padding {
+        padding-top: 60px;
     }
 }
